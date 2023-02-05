@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Advice generator app</title>
+
+  <style>
+    body{ font-family: sans-serif;}
+    *{ padding: 0; margin: 0;}
+    
+    .container {
+      background: #212733; 
+      height: 100vh; 
+      width: 100%; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      flex-direction: column;
+    }
+
+    .advice-box {
+      width: 28rem;
+      max-width: 75%;
+      height: 18rem;
+      background-color: #313a49;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      gap: 3rem;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;    
+    }
+
+    .advice-box i {
+      color: white;
+    }
+
+    .advice-id {
+      color: #53ffab;
+      font-weight:600;
+      letter-spacing: 2px;
+      font-size: 0.7rem;
+    }
+
+    .advice-text {
+      font-size: 1.4rem;
+      color: white;
+
+    }
+
+    .divider {
+      margin-bottom: 1.5rem;
+    }
+
+    .dice-bg {
+      width: 3rem;
+      height: 3rem;
+      background:#53ffab;
+      border-radius: 100%;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 280px;
+    }
+
+    .dice-bg i {
+      color: black;
+      font-size: 1.2rem;
+    }
+
+    .dice-bg i:hover {
+      color: white;
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 425px) {
+      .container .advice-box .divider img{
+        width: 75%;
+      }
+
+      .advice-text {
+      font-size: 1.2rem;
+      color: white;
+    }
+
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="advice-box">
+    <p class="advice-id">ADVICE #1192</p>
+    <p class="advice-text">"It is easy to sit up and take notice, what's difficult is getting up and taking action."</p>
+
+    <div class="divider">
+      <img src="images/pattern-divider-mobile.svg" alt="">
+    </div>
+
+  </div>
+
+  <div class="dice-bg">
+    <i id="diceBtn" class="fa-solid fa-dice-five" onclick="generateAdvice()"></i>
+  </div>
+
+</div>
+  
+<script src="main.js"></script>
+<script src="https://kit.fontawesome.com/38764058b3.js" crossorigin="anonymous"></script>
+</body>
+</html>
